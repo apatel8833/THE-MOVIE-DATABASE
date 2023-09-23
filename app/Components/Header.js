@@ -28,7 +28,9 @@ const Header = () => {
 
                     <NavbarContent className="sm:hidden pr-3" justify="center">
                         <NavbarBrand>
+                            <Link href='/'>
                             <img className='h-20 w-20' src='https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg' alt='not found'></img>
+                            </Link>
                         </NavbarBrand>
                     </NavbarContent>
                     <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -85,14 +87,14 @@ const Header = () => {
                             </Link>
                         </NavbarItem>
                     </NavbarContent>
-                    {/* <NavbarMenu className='text-white'>
+                    <NavbarMenu className='text-white'>
                         {menuItems.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <Link
-                                    className="w-full"
-                                    color={
-                                        index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-                                    }
+                                    className="w-full text-black mt-2"
+                                    // color={
+                                    //     index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
+                                    // }
                                     href={`/`}
                                     size="lg"
                                 >
@@ -100,7 +102,7 @@ const Header = () => {
                                 </Link>
                             </NavbarMenuItem>
                         ))}
-                    </NavbarMenu> */}
+                    </NavbarMenu>
                 </Navbar>
 
             </div>

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TrendingData } from '../Redux/TrendingSlice';
 import { CircularProgress } from "@nextui-org/react"
 import Link from 'next/link';
+import { Movie } from '@mui/icons-material';
 
 const Trending = () => {
     const dispatch = useDispatch();
@@ -26,13 +27,15 @@ const Trending = () => {
                         <h1 className='fs-3 fw-medium'>Trending..</h1>
                         <Link className='text-blue-700 right-0 absolute' href="/Popularmov">See More....</Link>
                     </div>
-                    <div className='min-h-80 mt-2 bg-orange-700  gap-4 overflow-x-scroll whitespace-nowrap scrollbar-hide'>
+                    <div className='min-h-80 mt-2   gap-4 overflow-x-scroll whitespace-nowrap scrollbar-hide'>
                         {
 
-                            Movies.map((elm, i) => {
+                          (Movies.length>0)? Movies.map((elm, i) => {
                                 return (
                                     <>
-                                        <Card key={i} className='relative min-h-[300px] items-center w-48 mr-2 inline-block' shadow="sm" isPressable onPress={() => console.log("item pressed")}>
+                                      <Link className='m-auto' key={i} href={`/Details/${elm.id}`}>
+
+                                        <Card key={i} className='relative min-h-[300px] items-center w-48 mr-2 inline-block border-1 border-slate-400' shadow="sm" isPressable onPress={() => console.log("item pressed")}>
                                             <CardBody className="overflow-visible p-0 ">
                                                 {/* <Image
                                                     shadow="sm"
@@ -67,9 +70,10 @@ const Trending = () => {
                                                 <p className="text-default-500">{elm.release_date}</p>
                                             </CardFooter>
                                         </Card>
+                                      </Link>
                                     </>
                                 )
-                            })
+                            }):<h1>Loading...</h1>
                         }
                     </div>
 

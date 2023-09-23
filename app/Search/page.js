@@ -22,7 +22,7 @@ const page = () => {
                     </div>
                     <div className='min-h-80 w-full mt-2 gap-4 flex flex-wrap '>
                         {
-                            Movies.map((elm, i) => {
+                           (Movies.length>0)? Movies.map((elm, i) => {
                                 return (
                                     <>
                                     <Link className='m-auto' key={i} href={`/Details/${elm.id}`}>
@@ -56,7 +56,7 @@ const page = () => {
                                     </Link>
                                     </>
                                 )
-                            })
+                            }):<h1>Loading...</h1>
                         }
                     </div>
 
