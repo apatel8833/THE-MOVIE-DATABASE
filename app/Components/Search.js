@@ -12,6 +12,9 @@ const Search = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if(!input  || input.trim().length <=1 ){
+            return alert("please enter valid input !!")
+         }
         dispatch(SearchData(input));
         router.push("/Search");
     }

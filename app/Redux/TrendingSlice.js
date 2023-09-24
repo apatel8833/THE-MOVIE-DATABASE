@@ -22,12 +22,12 @@ export const {setTrending} = TrendiSlice.actions;
 export default TrendiSlice.reducer;
 
 
-export function TrendingData (load){
+export function TrendingData (){
 
     return async function TrendingDatathunk (dispatch,getState){
 
         try {
-            const{data} = await axios.get(`${TRENDING_MOVIE}&page=${load}`);
+            const{data} = await axios.get(`${TRENDING_MOVIE}`);
             dispatch(setTrending(data.results));
             dispatch(setLoaderr())
         } catch (error) {
