@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UpcomingData } from '../Redux/UpcomingSlice';
 import { Card,CardBody,CardFooter,CircularProgress } from '@nextui-org/react';
 import Link from 'next/link';
+import Loader from './Loader';
 
 const Upcoming = () => {
     const dispatch = useDispatch();
@@ -70,7 +71,7 @@ const Upcoming = () => {
                                       </Link>
                                     </>
                                 )
-                            }):<h1>Loading..</h1>
+                            }):<Loader/>
                         }
                     </div>
 

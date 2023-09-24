@@ -5,6 +5,7 @@ import { TrendingData } from '../Redux/TrendingSlice';
 import Link from 'next/link';
 import { Card, CardBody, CardFooter, CircularProgress } from '@nextui-org/react';
 import { Button } from '@nextui-org/react';
+import Loader from '../Components/Loader';
 
 
 const page = () => {
@@ -63,7 +64,7 @@ const page = () => {
                                     </Link>
                                     </>
                                 )
-                            }):<h1>Loading...</h1>
+                            }):<Loader/>
                         }
                     </div>
                     <Button className='m-auto flex content-center bg-sky-800' onClick={()=>setLoad(load+1)}>Next</Button>

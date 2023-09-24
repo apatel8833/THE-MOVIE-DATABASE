@@ -10,6 +10,7 @@ import { TvairingData } from '../Redux/TvAiringSlice';
 import { TvontvData } from '../Redux/TvOntvSlice';
 import { TvtopratedData } from '../Redux/TvtopratedSlice';
 import Link from 'next/link';
+import Loader from '../Components/Loader';
 
 const page = () => {
     const dispatch = useDispatch();
@@ -67,7 +68,7 @@ const page = () => {
                                     </Link>
                                     </>
                                 )
-                            }):<h1>Loading...</h1>
+                            }):<Loader/>
                         }
                     </div>
                     <Button className='m-auto flex content-center bg-sky-800' onClick={()=>setLoad(load+1)}>Next</Button>

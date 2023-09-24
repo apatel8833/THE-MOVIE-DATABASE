@@ -6,6 +6,7 @@ import { TrendingData } from '../Redux/TrendingSlice';
 import { CircularProgress } from "@nextui-org/react"
 import Link from 'next/link';
 import { Movie } from '@mui/icons-material';
+import Loader from './Loader';
 
 const Trending = () => {
     const dispatch = useDispatch();
@@ -73,7 +74,7 @@ const Trending = () => {
                                       </Link>
                                     </>
                                 )
-                            }):<h1>Loading...</h1>
+                            }):<Loader/>
                         }
                     </div>
 

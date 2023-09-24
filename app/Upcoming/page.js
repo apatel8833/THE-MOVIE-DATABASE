@@ -6,6 +6,7 @@ import { Card, CardBody, CardFooter, CircularProgress } from '@nextui-org/react'
 import { UpcomingData } from '../Redux/UpcomingSlice';
 import { Button } from '@nextui-org/react';
 import Link from 'next/link';
+import Loader from '../Components/Loader';
 
 const page = () => {
     const dispatch = useDispatch();
@@ -64,7 +65,7 @@ const page = () => {
                                     </Link>
                                     </>
                                 )
-                            }):<h1 className='m-auto'>Loading...</h1>
+                            }):<Loader/>
                         }
                     </div>
                         <Button className='m-auto flex content-center bg-sky-800' onClick={()=>setLoad(load+1)}>Next</Button>

@@ -56,7 +56,7 @@ const page = () => {
                                     </Link>
                                     </>
                                 )
-                            }):<h1>Loading...</h1>
+                            }):<h1 className='m-atuo'>Data Not FOund...!!</h1>
                         }
                     </div>
 

@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NowplayingData } from '../Redux/NowPlayingSlice';
 import Link from 'next/link';
+import Loader from './Loader';
 
 
 const Nowplaying = () => {
@@ -74,7 +75,7 @@ const Nowplaying = () => {
                                       </Link>
                                     </>
                                 )
-                            }):<h1>Loading...</h1>
+                            }):<Loader/>
                         }
                     </div>
 
