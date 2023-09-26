@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Header from './Components/Header'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
+import Footer from './Components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
           <Provider store={store}>
             <Header />
             {children}
-
+            <Footer />
           </Provider>
         </NextUIProvider>
       </body>

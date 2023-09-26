@@ -4,6 +4,7 @@ import Trending from './Components/Trending'
 import Nowplaying from './Components/Nowplaying'
 import Upcoming from './Components/Upcoming'
 
+
 const page = () => {
   return (
     <>
