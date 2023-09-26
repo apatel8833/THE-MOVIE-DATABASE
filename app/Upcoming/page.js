@@ -68,7 +68,7 @@ const page = () => {
                             }):<Loader/>
                         }
                     </div>
-                        <Button className='m-auto flex content-center bg-sky-800' onClick={()=>setLoad(load+1)}>Next</Button>
+                        <Button className='m-auto flex content-center bg-sky-800 text-white' onClick={()=>setLoad(load+1)}>Next</Button>
 
                 </div>
 
