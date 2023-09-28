@@ -28,7 +28,7 @@ const page = () => {
 
                         className=' h-72 w-56 rounded-lg sm:h-96 w-72'
                     ></img>
-                    <div className='ml-8 min-h-[200px]'>
+                    <div className='ml-0 mt-0 min-h-[200px] sm:ml-8 mt-2'>
                         <h1 className='text-white fs-1 fw-bold'>{Movies.title}</h1>
                         <h1 className='text-slate-400'>({Movies.release_date})</h1>
                         <div className='w-96 h-20  flex content-center items-center '>
