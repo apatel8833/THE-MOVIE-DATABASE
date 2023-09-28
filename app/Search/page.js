@@ -28,12 +28,18 @@ const page = () => {
                                     <Link className='m-auto' key={i} href={`/Details/${elm.id}`}>
                                         <Card key={i} className=' min-h-[300px] items-center w-48 mr-2 m-auto content-center border-1 border-slate-300' shadow="sm" isPressable onPress={() => console.log("item pressed")}>
                                             <CardBody className="overflow-visible p-0 ">
+                                                {
+                                                    elm.poster_path ?
+
                                                 <img
                                                     src={`https://www.themoviedb.org/t/p/w220_and_h330_face${elm.poster_path
                                                         }`}
                                                     className="relative object-cover object-center h-[250px] w-full rounded-lg"
                                                 >
                                                 </img>
+                                                :
+                                                <p className='fs-4 d-flex justify-center items-center'>poster is not available..!!</p>
+                                                }
                                                 <div className='h-12 w-12 absolute top-56 left-4 rounded-full fs-2 text-white bg-cyan-800'>
 
                                                     <CircularProgress
