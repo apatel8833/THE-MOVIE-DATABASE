@@ -22,11 +22,11 @@ const page = () => {
                 <img style={{ position: "relative", height: "100%", width: "100%" }} className='object-cover object-center' src={`https://www.themoviedb.org/t/p/w220_and_h330_face${Movies.backdrop_path}`}></img>
                 <div className='absolute top-0 h-100 w-100 bg-green-800 opacity-80'>
                 </div>
-                <div className='relative h-100 w-100 bottom-100 flex items-center p-5'>
+                <div className='relative h-100 w-100 bottom-100 flex flex-col items-center p-2 sm:flex-row p-5'>
                     <img
                         src={`https://www.themoviedb.org/t/p/w220_and_h330_face${Movies.poster_path}`}
 
-                        className=' h-96 w-72 rounded-lg'
+                        className=' h-72 w-56 rounded-lg sm:h-96 w-72'
                     ></img>
                     <div className='ml-8 min-h-[200px]'>
                         <h1 className='text-white fs-1 fw-bold'>{Movies.title}</h1>
